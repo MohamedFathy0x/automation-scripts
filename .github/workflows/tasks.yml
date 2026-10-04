@@ -20,7 +20,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 66
+    timeout-minutes: 66       # our own cap — well under GitHub's 6-hour job limit
     steps:
       - uses: actions/checkout@v7
 
@@ -34,23 +34,40 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
+          git config user.name "state-bot"
+          git config user.email "action@users.noreply.github.com"
           END=$((SECONDS + 3300))
           while [ $SECONDS -lt $END ]; do
             python bot.py || true
+            # persist detections immediately — a cancelled run can never
+            # cause a duplicate notification this way
+            git add state.json HEARTBEAT.md
+            if ! git diff --cached --quiet; then
+              git commit -m "update [skip ci]"
+              git pull --rebase https://github.com/MohamedFathy0x/automation-scripts.git main || true
+              git push || true
+            fi
             sleep 150
           done
-          # hand over to a fresh runner so monitoring never stops
-          curl -sf -X POST \
-            -H "Authorization: Bearer $GH_PAT" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/MohamedFathy0x/automation-scripts/dispatches \
-            -d '{"event_type":"monitor"}'
+          # hand over to a fresh runner so monitoring never stops (3 attempts)
+          for i in 1 2 3; do
+            if curl -sf -X POST \
+                -H "Authorization: Bearer $GH_PAT" \
+                -H "Accept: application/vnd.github+json" \
+                https://api.github.com/repos/MohamedFathy0x/automation-scripts/dispatches \
+                -d '{"event_type":"monitor"}'; then
+              echo "hand-off dispatched"
+              break
+            fi
+            echo "hand-off attempt $i failed, retrying..."
+            sleep 20
+          done
 
-      - name: Persist state
+      - name: Persist state (final safety net)
+        if: always()
         run: |
           git config user.name "state-bot"
           git config user.email "action@users.noreply.github.com"
-          git pull --rebase https://github.com/MohamedFathy0x/automation-scripts.git main || true
           git add state.json HEARTBEAT.md
           git diff --cached --quiet || git commit -m "update [skip ci]"
-          git push
+          git push || true

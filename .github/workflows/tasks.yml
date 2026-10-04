@@ -1,26 +1,26 @@
 name: scheduled tasks
 
 on:
-  schedule:
-    # every 5 minutes, offset from the top of the hour (GitHub's scheduler
-    # is congested exactly at :00 — an offset reduces delays a lot)
-    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
-  # external instant trigger (cron-job.org -> POST /repos/.../dispatches)
-  repository_dispatch:
-    types: [monitor]
   # manual run from the Actions tab
   workflow_dispatch:
+  # external trigger (the monitor loop re-fires itself through this every
+  # hour; an hourly schedule below acts as a dead-man's-switch recovery)
+  repository_dispatch:
+    types: [monitor]
+  schedule:
+    - cron: "23 * * * *"   # hourly recovery kick if the loop chain ever dies
 
 permissions:
   contents: write             # needed to commit state.json back
 
 concurrency:
   group: tasks
-  cancel-in-progress: false
+  cancel-in-progress: true    # never let runs pile up — newest wins
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 66
     steps:
       - uses: actions/checkout@v4
 
@@ -28,16 +28,29 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run tasks
+      - name: Monitor loop (~55 min, one check every 2.5 min)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python bot.py
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          END=$((SECONDS + 3300))
+          while [ $SECONDS -lt $END ]; do
+            python bot.py || true
+            sleep 150
+          done
+          # hand over to a fresh runner so monitoring never stops
+          curl -sf -X POST \
+            -H "Authorization: Bearer $GH_PAT" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/MohamedFathy0x/automation-scripts/dispatches \
+            -d '{"event_type":"monitor"}'
 
       - name: Persist state
         run: |
           git config user.name "state-bot"
           git config user.email "action@users.noreply.github.com"
+          git pull --rebase https://github.com/MohamedFathy0x/automation-scripts.git main || true
           git add state.json HEARTBEAT.md
           git diff --cached --quiet || git commit -m "update [skip ci]"
           git push

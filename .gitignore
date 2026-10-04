@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+gh_token.txt 
+_deploy.py 
+_gh_device_flow.py
+_*.py

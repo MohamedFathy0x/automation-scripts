@@ -1,0 +1,16 @@
+{
+  "telegram_bot_token": "",
+  "telegram_chat_id": "",
+  "disable_link_preview": true,
+  "only_bounties": false,
+  "notify_removed": false,
+  "use_fallback_dataset": true,
+  "max_scope_lines": 10,
+  "platforms": {
+    "hackerone": true,
+    "bugcrowd": true,
+    "intigriti": true,
+    "yeswehack": true,
+    "standoff365": true
+  }
+}

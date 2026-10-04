@@ -1,0 +1,43 @@
+name: scheduled tasks
+
+on:
+  schedule:
+    # every 5 minutes, offset from the top of the hour (GitHub's scheduler
+    # is congested exactly at :00 — an offset reduces delays a lot)
+    - cron: "2-59/5 * * * *"
+  # external instant trigger (cron-job.org -> POST /repos/.../dispatches)
+  repository_dispatch:
+    types: [monitor]
+  # manual run from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write             # needed to commit state.json back
+
+concurrency:
+  group: tasks
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tasks
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python bot.py
+
+      - name: Persist state
+        run: |
+          git config user.name "state-bot"
+          git config user.email "action@users.noreply.github.com"
+          git add state.json HEARTBEAT.md
+          git diff --cached --quiet || git commit -m "update [skip ci]"
+          git push

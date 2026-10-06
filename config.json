@@ -2,10 +2,12 @@
   "telegram_bot_token": "",
   "telegram_chat_id": "",
   "disable_link_preview": true,
-  "only_bounties": false,
+  "only_bounties": true,
+  "exclude_hardware_only": true,
   "notify_removed": false,
   "use_fallback_dataset": true,
   "max_scope_lines": 10,
+  "utc_offset_hours": 3,
   "platforms": {
     "hackerone": true,
     "bugcrowd": true,

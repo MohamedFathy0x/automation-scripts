@@ -27,7 +27,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
@@ -160,7 +160,7 @@ class HackerOne:
     handle
     name
     structured_scopes(first: 60) {
-      edges { node { asset_identifier eligible_for_bounty instruction __typename } __typename }
+      edges { node { asset_identifier asset_type eligible_for_bounty instruction __typename } __typename }
       __typename
     }
     __typename
@@ -238,8 +238,8 @@ class HackerOne:
                          f"https://hackerone.com/{prog.key}")
         team = data.get("team") or {}
         edges = ((team.get("structured_scopes") or {}).get("edges")) or []
-        return [e["node"].get("asset_identifier") for e in edges
-                if e.get("node", {}).get("asset_identifier")]
+        return [(e["node"].get("asset_identifier"), e["node"].get("asset_type"))
+                for e in edges if e.get("node", {}).get("asset_identifier")]
 
 
 class Bugcrowd:
@@ -287,8 +287,9 @@ class Bugcrowd:
             raise RuntimeError("BC scopeDetails empty")
         lines = html_text(val)
         # drop markdown headers / separators / empty fluff, keep real content
-        return [l for l in lines
-                if not l.startswith("##") and set(l) != {"-"} and len(l) > 2]
+        pairs = [(l, None) for l in lines
+                 if not l.startswith("##") and set(l) != {"-"} and len(l) > 2]
+        return pairs
 
 
 class Intigriti:
@@ -353,7 +354,7 @@ class YesWeHack:
 
     def fetch_scope(self, prog):
         j = http_json(f"https://api.yeswehack.com/programs/{prog.key}")
-        lines = []
+        pairs = []
         for s in j.get("scopes") or []:
             entry = s.get("scope") or ""
             extra = []
@@ -361,8 +362,9 @@ class YesWeHack:
                 extra.append(s["scope_type_name"])
             if s.get("asset_value"):
                 extra.append(s["asset_value"])
-            lines.append(entry + (f" [{', '.join(extra)}]" if extra else ""))
-        return lines
+            line = entry + (f" [{', '.join(extra)}]" if extra else "")
+            pairs.append((line, s.get("scope_type") or None))
+        return pairs
 
 
 class Standoff365:
@@ -386,14 +388,46 @@ class Standoff365:
             if slug in seen:
                 continue
             seen.add(slug)
+            desc = it.get("description") or it.get("shortDescription") or ""
+            # Standoff doesn't flag paid vs VDP in the list payload — most
+            # programs carry a reward, so sniff the description text
+            paid = bool(re.search(r"рубл|₽|вознагражде|reward|bounty",
+                                  desc, re.I))
             progs.append(Program(
                 "standoff365", slug, it.get("name") or slug,
                 f"https://bugbounty.standoff365.com/programs/{slug}",
-                launched=it.get("publishedAt") or it.get("createdAt")))
+                launched=it.get("publishedAt") or it.get("createdAt"),
+                bounties=paid))
         return progs
 
+    # a scope-section heading on the program page
+    SCOPE_HEAD = re.compile(r"^#{0,6}\s*\**\s*(скоуп|scope|область действия)", re.I)
+    # a heading that starts a post-scope section (rewards, rules, ...)
+    STOP_HEAD = re.compile(r"(вознагражде|наград|reward|правил|требован|недопустимого события для)", re.I)
+
+    @staticmethod
+    def _scope_entry(line):
+        """Return the line if it looks like a published scope entry
+        (wildcard / domain / IP / IP-range / URL / mail-domain)."""
+        l = line.strip().strip("`").strip()
+        l = re.sub(r"^\*\*(.+)\*\*$", r"\1", l).strip()   # markdown bold
+        if not l or len(l) > 160:
+            return None
+        if l.startswith("*."):
+            return l
+        if re.match(r"^\d{1,3}(?:\.\d{1,3}){3}(?:/\d+)?(?:\s*-\s*\d{1,3}(?:\.\d{1,3}){3})?\.?$", l):
+            return l
+        if re.match(r"^[a-zA-Z0-9*-]+(?:\.[a-zA-Z0-9*-]+)+\.?,?$", l):
+            return l
+        if re.search(r"https?://", l):
+            return l
+        if re.search(r"@[\w.-]+\.[a-zA-Z]{2,}", l):
+            return l
+        return None
+
     def fetch_scope(self, prog):
-        """Scope lives inside the program description (markdown) on the list page."""
+        """The exact scope section from the program description — wildcards,
+        IPs, IP ranges, mail domains and URLs exactly as published."""
         st, raw = http(self.LIST)
         if st != 200:
             raise RuntimeError(f"S365 list HTTP {st}")
@@ -408,13 +442,34 @@ class Standoff365:
                 break
         if not desc:
             raise RuntimeError("S365 description not found")
-        domains = []
-        skip_ext = re.compile(r"\.(ini|js|json|css|png|jpe?g|gif|svg|html?|php|pdf|zip|exe|dll|txt|md|xml|ya?ml|py|ts|sh|so)$")
-        for tok in re.findall(r"(?:[a-z0-9-]+\.)+[a-z]{2,}", desc.lower()):
-            tok = tok.strip(".,;*")
-            if tok and not skip_ext.search(tok) and tok not in domains and len(domains) < 12:
-                domains.append(tok)
-        return domains or html_text(desc)[:8]
+
+        lines = desc.splitlines()
+        pairs, start = [], None
+        for i, l in enumerate(lines):
+            if self.SCOPE_HEAD.match(l.strip()):
+                start = i + 1
+                break
+        if start is not None:
+            for l in lines[start:start + 80]:
+                s = l.strip()
+                if pairs and re.match(r"^#{1,6}\s*\**\s*$", s):
+                    break                                   # bare ### separator
+                if self.STOP_HEAD.search(s):
+                    break
+                if s.startswith("#"):
+                    continue                                # sub-heading
+                e = self._scope_entry(re.sub(r"^(?:[-•*]\s+)+", "", s))
+                if e and e not in [p[0] for p in pairs]:
+                    pairs.append((e, None))
+                if len(pairs) >= 20:
+                    break
+        if not pairs:
+            # fallback: bare domain tokens anywhere in the description
+            for tok in re.findall(r"(?:[a-z0-9-]+\.)+[a-z]{2,}", desc.lower()):
+                tok = tok.strip(".,;*")
+                if tok and tok not in [p[0] for p in pairs]:
+                    pairs.append((tok, None))
+        return pairs[:15]
 
 
 FETCHERS = {
@@ -506,15 +561,16 @@ def dataset_scope(platform, key):
             return []
         if pk != key:
             continue
-        lines = []
+        pairs = []
         for t in (p.get("targets") or {}).get("in_scope") or []:
             ident = (t.get("asset_identifier") or t.get("target")
                      or t.get("uri") or t.get("endpoint") or "")
             if not ident:
                 continue
-            typ = t.get("asset_type") or t.get("type") or ""
-            lines.append(ident + (f" [{typ}]" if typ and typ != "all" else ""))
-        return lines
+            typ = (t.get("asset_type") or t.get("type") or "").strip()
+            line = ident + (f" [{typ}]" if typ and typ.lower() != "all" else "")
+            pairs.append((line, typ or None))
+        return pairs
     return []
 
 
@@ -534,9 +590,11 @@ def load_config():
         or os.environ.get("TELEGRAM_CHAT_ID", "")
     cfg.setdefault("disable_link_preview", True)
     cfg.setdefault("only_bounties", False)
+    cfg.setdefault("exclude_hardware_only", True)
     cfg.setdefault("notify_removed", False)
     cfg.setdefault("use_fallback_dataset", True)
     cfg.setdefault("max_scope_lines", 10)
+    cfg.setdefault("utc_offset_hours", 0)
     cfg.setdefault("platforms", {k: True for k in FETCHERS})
     return cfg
 
@@ -586,7 +644,12 @@ def build_message(prog, scope_lines, cfg):
     if prog.launched:
         try:
             dt = datetime.fromisoformat(prog.launched.replace("Z", "+00:00"))
-            lines.append(f"📅 {dt.strftime('%Y-%m-%d %H:%M UTC')}")
+            stamp = f"{dt.strftime('%Y-%m-%d %H:%M UTC')}"
+            off = cfg.get("utc_offset_hours") or 0
+            if off:
+                local = dt + timedelta(hours=off)
+                stamp += f" — {local.strftime('%H:%M your local time')}"
+            lines.append(f"📅 {stamp}")
         except ValueError:
             lines.append(f"📅 {esc(prog.launched)}")
     if scope_lines:
@@ -668,6 +731,12 @@ def run_cycle(cfg, state, dry_run=False, bootstrap=False, demo=False):
 
     # filter, newest first
     if cfg.get("only_bounties"):
+        for p in new_programs:
+            if p.bounties is not True:
+                # record VDPs so they are never re-detected or announced later
+                known.setdefault(p.platform, {})[p.key] = {
+                    "name": p.name, "launched": p.launched, "url": p.url,
+                    "skipped": "vdp"}
         new_programs = [p for p in new_programs if p.bounties is True]
     new_programs.sort(key=lambda p: p.launched or "", reverse=True)
 
@@ -713,23 +782,40 @@ def run_cycle(cfg, state, dry_run=False, bootstrap=False, demo=False):
         + ", ".join(f"{p.platform}/{p.key}" for p in new_programs))
 
     for prog in new_programs[:10]:                  # safety cap per cycle
-        scope_lines = []
+        scope_pairs = []                            # (message line, type) tuples
         time.sleep(PAUSE_BETWEEN_REQUESTS)          # avoid bursting the platform
         fetcher = FETCHERS[prog.platform]()
         try:
-            scope_lines = fetcher.fetch_scope(prog) or []
-            log(f"  scope {prog.platform}/{prog.key}: {len(scope_lines)} targets")
+            scope_pairs = fetcher.fetch_scope(prog) or []
+            log(f"  scope {prog.platform}/{prog.key}: {len(scope_pairs)} targets")
         except Exception as e:
             if cfg.get("use_fallback_dataset", True):
                 try:
-                    scope_lines = dataset_scope(prog.platform, prog.key)
-                    if scope_lines:
-                        log(f"  scope {prog.platform}/{prog.key}: {len(scope_lines)} targets (dataset)")
+                    scope_pairs = dataset_scope(prog.platform, prog.key)
+                    if scope_pairs:
+                        log(f"  scope {prog.platform}/{prog.key}: {len(scope_pairs)} targets (dataset)")
                 except Exception:
                     pass
-            if not scope_lines:
+            if not scope_pairs:
                 log(f"  scope {prog.platform}/{prog.key}: unavailable ({e})")
-        msg = build_message(prog, scope_lines, cfg)
+
+        # hardware-only filter: needs typed targets (H1/YWH direct, or the
+        # fallback dataset for BC/IT).  A program is skipped only when EVERY
+        # known target type is hardware — anything else passes.
+        types = {t for _, t in scope_pairs if t}
+        if not types and prog.platform != "standoff365" and cfg.get("use_fallback_dataset", True):
+            try:
+                types = {t for _, t in dataset_scope(prog.platform, prog.key) if t}
+            except Exception:
+                pass
+        if cfg.get("exclude_hardware_only", True) and types and types <= {"hardware"}:
+            log(f"  skipped (hardware-only): {prog.platform}/{prog.key}")
+            known.setdefault(prog.platform, {})[prog.key] = {
+                "name": prog.name, "launched": prog.launched, "url": prog.url,
+                "skipped": "hardware"}
+            continue
+
+        msg = build_message(prog, [l for l, _ in scope_pairs], cfg)
         if dry_run:
             print("=" * 60)
             print(re.sub(r"</?[a-z]+>", "", msg))

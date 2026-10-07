@@ -500,6 +500,1052 @@
     "name": "OPPO",
     "launched": "2025-02-14T06:52:19.619Z",
     "url": "https://hackerone.com/oppo_bbp"
+   },
+   "bill_vdp": {
+    "name": "BILL VDP",
+    "launched": null,
+    "url": "https://hackerone.com/bill_vdp",
+    "skipped": "vdp"
+   },
+   "pepsico_vdp": {
+    "name": "PepsiCo VDP",
+    "launched": null,
+    "url": "https://hackerone.com/pepsico_vdp",
+    "skipped": "vdp"
+   },
+   "aws_vdp": {
+    "name": "AWS VDP",
+    "launched": null,
+    "url": "https://hackerone.com/aws_vdp",
+    "skipped": "vdp"
+   },
+   "itau_unibanco": {
+    "name": "Itaú Unibanco",
+    "launched": null,
+    "url": "https://hackerone.com/itau_unibanco",
+    "skipped": "vdp"
+   },
+   "supabase": {
+    "name": "Supabase",
+    "launched": null,
+    "url": "https://hackerone.com/supabase",
+    "skipped": "vdp"
+   },
+   "finnair_vdp": {
+    "name": "Finnair Vulnerability Disclosure",
+    "launched": null,
+    "url": "https://hackerone.com/finnair_vdp",
+    "skipped": "vdp"
+   },
+   "liverpool_victoria": {
+    "name": "Liverpool Victoria",
+    "launched": null,
+    "url": "https://hackerone.com/liverpool_victoria",
+    "skipped": "vdp"
+   },
+   "6sense-vdp": {
+    "name": "6sense VDP",
+    "launched": null,
+    "url": "https://hackerone.com/6sense-vdp",
+    "skipped": "vdp"
+   },
+   "mintel": {
+    "name": "Mintel",
+    "launched": null,
+    "url": "https://hackerone.com/mintel",
+    "skipped": "vdp"
+   },
+   "lpl_financial-vdp": {
+    "name": "LPL Financial VDP",
+    "launched": null,
+    "url": "https://hackerone.com/lpl_financial-vdp",
+    "skipped": "vdp"
+   },
+   "peloton": {
+    "name": "Peloton",
+    "launched": null,
+    "url": "https://hackerone.com/peloton",
+    "skipped": "vdp"
+   },
+   "ion": {
+    "name": "ION Group",
+    "launched": null,
+    "url": "https://hackerone.com/ion",
+    "skipped": "vdp"
+   },
+   "tomtom": {
+    "name": "TomTom",
+    "launched": null,
+    "url": "https://hackerone.com/tomtom",
+    "skipped": "vdp"
+   },
+   "lowes": {
+    "name": "Lowe's Companies VDP",
+    "launched": null,
+    "url": "https://hackerone.com/lowes",
+    "skipped": "vdp"
+   },
+   "rei_vdp": {
+    "name": "REI VDP",
+    "launched": null,
+    "url": "https://hackerone.com/rei_vdp",
+    "skipped": "vdp"
+   },
+   "interco_vdp": {
+    "name": "Inter & Co. VDP",
+    "launched": null,
+    "url": "https://hackerone.com/interco_vdp",
+    "skipped": "vdp"
+   },
+   "transunion": {
+    "name": "TransUnion LLC",
+    "launched": null,
+    "url": "https://hackerone.com/transunion",
+    "skipped": "vdp"
+   },
+   "wellhive": {
+    "name": "WellHive",
+    "launched": null,
+    "url": "https://hackerone.com/wellhive",
+    "skipped": "vdp"
+   },
+   "aeromexico_vdp": {
+    "name": "Aeromexico VDP",
+    "launched": null,
+    "url": "https://hackerone.com/aeromexico_vdp",
+    "skipped": "vdp"
+   },
+   "aon": {
+    "name": "Aon",
+    "launched": null,
+    "url": "https://hackerone.com/aon",
+    "skipped": "vdp"
+   },
+   "oaknorth_bank": {
+    "name": "OakNorth Bank",
+    "launched": null,
+    "url": "https://hackerone.com/oaknorth_bank",
+    "skipped": "vdp"
+   },
+   "aven_response": {
+    "name": "Aven (Response)",
+    "launched": null,
+    "url": "https://hackerone.com/aven_response",
+    "skipped": "vdp"
+   },
+   "brightspeed": {
+    "name": "Brightspeed",
+    "launched": null,
+    "url": "https://hackerone.com/brightspeed",
+    "skipped": "vdp"
+   },
+   "alshaya": {
+    "name": "Alshaya",
+    "launched": null,
+    "url": "https://hackerone.com/alshaya",
+    "skipped": "vdp"
+   },
+   "truist_financial": {
+    "name": "Truist Financial",
+    "launched": null,
+    "url": "https://hackerone.com/truist_financial",
+    "skipped": "vdp"
+   },
+   "fertitta_entertainment": {
+    "name": "Fertitta Entertainment",
+    "launched": null,
+    "url": "https://hackerone.com/fertitta_entertainment",
+    "skipped": "vdp"
+   },
+   "abn_amro_vdp": {
+    "name": "ABN AMRO Bank VDP",
+    "launched": null,
+    "url": "https://hackerone.com/abn_amro_vdp",
+    "skipped": "vdp"
+   },
+   "prudential-financial": {
+    "name": "Prudential Financial",
+    "launched": null,
+    "url": "https://hackerone.com/prudential-financial",
+    "skipped": "vdp"
+   },
+   "us-department-of-state": {
+    "name": "U.S. Department of State",
+    "launched": null,
+    "url": "https://hackerone.com/us-department-of-state",
+    "skipped": "vdp"
+   },
+   "kkr_vdp": {
+    "name": "KKR-VDP",
+    "launched": null,
+    "url": "https://hackerone.com/kkr_vdp",
+    "skipped": "vdp"
+   },
+   "intuit_rdp": {
+    "name": "Intuit",
+    "launched": null,
+    "url": "https://hackerone.com/intuit_rdp",
+    "skipped": "vdp"
+   },
+   "fifth_third_bank_vdp": {
+    "name": "Fifth Third Bank VDP",
+    "launched": null,
+    "url": "https://hackerone.com/fifth_third_bank_vdp",
+    "skipped": "vdp"
+   },
+   "productboard": {
+    "name": "ProductBoard, Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/productboard",
+    "skipped": "vdp"
+   },
+   "abb": {
+    "name": "ABB Information Systems Ltd",
+    "launched": null,
+    "url": "https://hackerone.com/abb",
+    "skipped": "vdp"
+   },
+   "avalara": {
+    "name": "Avalara",
+    "launched": null,
+    "url": "https://hackerone.com/avalara",
+    "skipped": "vdp"
+   },
+   "abercrombie_fitch": {
+    "name": "Abercrombie & Fitch Management Co.",
+    "launched": null,
+    "url": "https://hackerone.com/abercrombie_fitch",
+    "skipped": "vdp"
+   },
+   "city_of_los_angeles_vdp": {
+    "name": "City of Los Angeles",
+    "launched": null,
+    "url": "https://hackerone.com/city_of_los_angeles_vdp",
+    "skipped": "vdp"
+   },
+   "resmed": {
+    "name": "ResMed",
+    "launched": null,
+    "url": "https://hackerone.com/resmed",
+    "skipped": "vdp"
+   },
+   "daimler_truck": {
+    "name": "Daimler Truck",
+    "launched": null,
+    "url": "https://hackerone.com/daimler_truck",
+    "skipped": "vdp"
+   },
+   "canada_goose_inc": {
+    "name": "Canada Goose Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/canada_goose_inc",
+    "skipped": "vdp"
+   },
+   "monarch_money": {
+    "name": "Monarch Money",
+    "launched": null,
+    "url": "https://hackerone.com/monarch_money",
+    "skipped": "vdp"
+   },
+   "clarivate": {
+    "name": "Clarivate",
+    "launched": null,
+    "url": "https://hackerone.com/clarivate",
+    "skipped": "vdp"
+   },
+   "render": {
+    "name": "Render",
+    "launched": null,
+    "url": "https://hackerone.com/render",
+    "skipped": "vdp"
+   },
+   "callsign": {
+    "name": "Callsign",
+    "launched": null,
+    "url": "https://hackerone.com/callsign",
+    "skipped": "vdp"
+   },
+   "ro": {
+    "name": "Ro",
+    "launched": null,
+    "url": "https://hackerone.com/ro",
+    "skipped": "vdp"
+   },
+   "unitigroup": {
+    "name": "Uniti",
+    "launched": null,
+    "url": "https://hackerone.com/unitigroup",
+    "skipped": "vdp"
+   },
+   "fidelity": {
+    "name": "Fidelity",
+    "launched": null,
+    "url": "https://hackerone.com/fidelity",
+    "skipped": "vdp"
+   },
+   "fresenius": {
+    "name": "Fresenius",
+    "launched": null,
+    "url": "https://hackerone.com/fresenius",
+    "skipped": "vdp"
+   },
+   "caterpillar": {
+    "name": "Caterpillar",
+    "launched": null,
+    "url": "https://hackerone.com/caterpillar",
+    "skipped": "vdp"
+   },
+   "disney": {
+    "name": "The Walt Disney Company",
+    "launched": null,
+    "url": "https://hackerone.com/disney",
+    "skipped": "vdp"
+   },
+   "alohi": {
+    "name": "Alohi",
+    "launched": null,
+    "url": "https://hackerone.com/alohi",
+    "skipped": "vdp"
+   },
+   "gymshark": {
+    "name": "Gymshark",
+    "launched": null,
+    "url": "https://hackerone.com/gymshark",
+    "skipped": "vdp"
+   },
+   "moov": {
+    "name": "Moov",
+    "launched": null,
+    "url": "https://hackerone.com/moov",
+    "skipped": "vdp"
+   },
+   "allegion": {
+    "name": "Allegion",
+    "launched": null,
+    "url": "https://hackerone.com/allegion",
+    "skipped": "vdp"
+   },
+   "pagerduty": {
+    "name": "PagerDuty",
+    "launched": null,
+    "url": "https://hackerone.com/pagerduty",
+    "skipped": "vdp"
+   },
+   "oanda": {
+    "name": "OANDA",
+    "launched": null,
+    "url": "https://hackerone.com/oanda",
+    "skipped": "vdp"
+   },
+   "tesco": {
+    "name": "Tesco",
+    "launched": null,
+    "url": "https://hackerone.com/tesco",
+    "skipped": "vdp"
+   },
+   "planet-labs": {
+    "name": "Planet Labs",
+    "launched": null,
+    "url": "https://hackerone.com/planet-labs",
+    "skipped": "vdp"
+   },
+   "veeam": {
+    "name": "Veeam",
+    "launched": null,
+    "url": "https://hackerone.com/veeam",
+    "skipped": "vdp"
+   },
+   "redis-vdp": {
+    "name": "Redis VDP",
+    "launched": null,
+    "url": "https://hackerone.com/redis-vdp",
+    "skipped": "vdp"
+   },
+   "godaddy-vdp": {
+    "name": "GoDaddy VDP",
+    "launched": null,
+    "url": "https://hackerone.com/godaddy-vdp",
+    "skipped": "vdp"
+   },
+   "mondelez": {
+    "name": "Mondelēz International",
+    "launched": null,
+    "url": "https://hackerone.com/mondelez",
+    "skipped": "vdp"
+   },
+   "apnic": {
+    "name": "APNIC",
+    "launched": null,
+    "url": "https://hackerone.com/apnic",
+    "skipped": "vdp"
+   },
+   "hy-vee": {
+    "name": "Hy-Vee",
+    "launched": null,
+    "url": "https://hackerone.com/hy-vee",
+    "skipped": "vdp"
+   },
+   "tenable": {
+    "name": "Tenable",
+    "launched": null,
+    "url": "https://hackerone.com/tenable",
+    "skipped": "vdp"
+   },
+   "octopus-energy": {
+    "name": "Octopus Energy Group",
+    "launched": null,
+    "url": "https://hackerone.com/octopus-energy",
+    "skipped": "vdp"
+   },
+   "fastly-vdp": {
+    "name": "Fastly VDP",
+    "launched": null,
+    "url": "https://hackerone.com/fastly-vdp",
+    "skipped": "vdp"
+   },
+   "servicenow-disclosure": {
+    "name": "ServiceNow Disclosure",
+    "launched": null,
+    "url": "https://hackerone.com/servicenow-disclosure",
+    "skipped": "vdp"
+   },
+   "zurich-insurance": {
+    "name": "Zurich Insurance",
+    "launched": null,
+    "url": "https://hackerone.com/zurich-insurance",
+    "skipped": "vdp"
+   },
+   "latamairlines": {
+    "name": "LATAM Airlines",
+    "launched": null,
+    "url": "https://hackerone.com/latamairlines",
+    "skipped": "vdp"
+   },
+   "jetblue": {
+    "name": "JetBlue",
+    "launched": null,
+    "url": "https://hackerone.com/jetblue",
+    "skipped": "vdp"
+   },
+   "nominet": {
+    "name": "Nominet",
+    "launched": null,
+    "url": "https://hackerone.com/nominet",
+    "skipped": "vdp"
+   },
+   "zebra_vdp": {
+    "name": "Zebra VDP",
+    "launched": null,
+    "url": "https://hackerone.com/zebra_vdp",
+    "skipped": "vdp"
+   },
+   "fiserv": {
+    "name": "Fiserv",
+    "launched": null,
+    "url": "https://hackerone.com/fiserv",
+    "skipped": "vdp"
+   },
+   "ups": {
+    "name": "UPS VDP",
+    "launched": null,
+    "url": "https://hackerone.com/ups",
+    "skipped": "vdp"
+   },
+   "beiersdorf": {
+    "name": "Beiersdorf",
+    "launched": null,
+    "url": "https://hackerone.com/beiersdorf",
+    "skipped": "vdp"
+   },
+   "john-deere": {
+    "name": "John Deere",
+    "launched": null,
+    "url": "https://hackerone.com/john-deere",
+    "skipped": "vdp"
+   },
+   "mtb": {
+    "name": "M&T Bank Vulnerability Disclosure",
+    "launched": null,
+    "url": "https://hackerone.com/mtb",
+    "skipped": "vdp"
+   },
+   "dib-vdp": {
+    "name": "DIB-VDP",
+    "launched": null,
+    "url": "https://hackerone.com/dib-vdp",
+    "skipped": "vdp"
+   },
+   "global-payments": {
+    "name": "Global Payments",
+    "launched": null,
+    "url": "https://hackerone.com/global-payments",
+    "skipped": "vdp"
+   },
+   "blackrock": {
+    "name": "BlackRock",
+    "launched": null,
+    "url": "https://hackerone.com/blackrock",
+    "skipped": "vdp"
+   },
+   "costco": {
+    "name": "Costco",
+    "launched": null,
+    "url": "https://hackerone.com/costco",
+    "skipped": "vdp"
+   },
+   "on": {
+    "name": "On ",
+    "launched": null,
+    "url": "https://hackerone.com/on",
+    "skipped": "vdp"
+   },
+   "mars": {
+    "name": "Mars",
+    "launched": null,
+    "url": "https://hackerone.com/mars",
+    "skipped": "vdp"
+   },
+   "who-covid-19-mobile-app": {
+    "name": "WHO COVID-19 Mobile App",
+    "launched": null,
+    "url": "https://hackerone.com/who-covid-19-mobile-app",
+    "skipped": "vdp"
+   },
+   "pfizer": {
+    "name": "Pfizer",
+    "launched": null,
+    "url": "https://hackerone.com/pfizer",
+    "skipped": "vdp"
+   },
+   "emoney-advisor": {
+    "name": "eMoney Advisor",
+    "launched": null,
+    "url": "https://hackerone.com/emoney-advisor",
+    "skipped": "vdp"
+   },
+   "paystack-vdp": {
+    "name": "Paystack Vulnerability Disclosure",
+    "launched": null,
+    "url": "https://hackerone.com/paystack-vdp",
+    "skipped": "vdp"
+   },
+   "r3": {
+    "name": "R3",
+    "launched": null,
+    "url": "https://hackerone.com/r3",
+    "skipped": "vdp"
+   },
+   "cbre": {
+    "name": "CBRE",
+    "launched": null,
+    "url": "https://hackerone.com/cbre",
+    "skipped": "vdp"
+   },
+   "anywhererealestate": {
+    "name": "Anywhere Real Estate",
+    "launched": null,
+    "url": "https://hackerone.com/anywhererealestate",
+    "skipped": "vdp"
+   },
+   "ohiosecretaryofstate": {
+    "name": "Ohio Secretary of State",
+    "launched": null,
+    "url": "https://hackerone.com/ohiosecretaryofstate",
+    "skipped": "vdp"
+   },
+   "openmage": {
+    "name": "OpenMage",
+    "launched": null,
+    "url": "https://hackerone.com/openmage",
+    "skipped": "vdp"
+   },
+   "estee-lauder": {
+    "name": " Esteé  Lauder",
+    "launched": null,
+    "url": "https://hackerone.com/estee-lauder",
+    "skipped": "vdp"
+   },
+   "aig": {
+    "name": "AIG",
+    "launched": null,
+    "url": "https://hackerone.com/aig",
+    "skipped": "vdp"
+   },
+   "finra": {
+    "name": "FINRA Response",
+    "launched": null,
+    "url": "https://hackerone.com/finra",
+    "skipped": "vdp"
+   },
+   "cognizant": {
+    "name": "Cognizant",
+    "launched": null,
+    "url": "https://hackerone.com/cognizant",
+    "skipped": "vdp"
+   },
+   "vendasta": {
+    "name": "Vendasta",
+    "launched": null,
+    "url": "https://hackerone.com/vendasta",
+    "skipped": "vdp"
+   },
+   "mendix": {
+    "name": "Mendix",
+    "launched": null,
+    "url": "https://hackerone.com/mendix",
+    "skipped": "vdp"
+   },
+   "cedars-sinai": {
+    "name": "Cedars-Sinai",
+    "launched": null,
+    "url": "https://hackerone.com/cedars-sinai",
+    "skipped": "vdp"
+   },
+   "shutterfly_vdp": {
+    "name": "Shutterfly VDP",
+    "launched": null,
+    "url": "https://hackerone.com/shutterfly_vdp",
+    "skipped": "vdp"
+   },
+   "usps": {
+    "name": "USPS - United States Postal Service",
+    "launched": null,
+    "url": "https://hackerone.com/usps",
+    "skipped": "vdp"
+   },
+   "navient_solutions": {
+    "name": "Navient Solutions LLC",
+    "launched": null,
+    "url": "https://hackerone.com/navient_solutions",
+    "skipped": "vdp"
+   },
+   "stagingdoteverydotorg": {
+    "name": "Staging.every.org",
+    "launched": null,
+    "url": "https://hackerone.com/stagingdoteverydotorg",
+    "skipped": "vdp"
+   },
+   "td-bank": {
+    "name": "TD Bank Group",
+    "launched": null,
+    "url": "https://hackerone.com/td-bank",
+    "skipped": "vdp"
+   },
+   "flexport_vdp": {
+    "name": "Flexport VDP",
+    "launched": null,
+    "url": "https://hackerone.com/flexport_vdp",
+    "skipped": "vdp"
+   },
+   "thnks": {
+    "name": "Thnks",
+    "launched": null,
+    "url": "https://hackerone.com/thnks",
+    "skipped": "vdp"
+   },
+   "myndr": {
+    "name": "Myndr",
+    "launched": null,
+    "url": "https://hackerone.com/myndr",
+    "skipped": "vdp"
+   },
+   "insulet_corporation": {
+    "name": "Insulet Corporation",
+    "launched": null,
+    "url": "https://hackerone.com/insulet_corporation",
+    "skipped": "vdp"
+   },
+   "simple_poll": {
+    "name": "Simple Poll",
+    "launched": null,
+    "url": "https://hackerone.com/simple_poll",
+    "skipped": "vdp"
+   },
+   "pubg": {
+    "name": "PUBG",
+    "launched": null,
+    "url": "https://hackerone.com/pubg",
+    "skipped": "vdp"
+   },
+   "picsart": {
+    "name": "Picsart",
+    "launched": null,
+    "url": "https://hackerone.com/picsart",
+    "skipped": "vdp"
+   },
+   "hcl_software": {
+    "name": "HCL Software Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/hcl_software",
+    "skipped": "vdp"
+   },
+   "stripo": {
+    "name": "Stripo Inc",
+    "launched": null,
+    "url": "https://hackerone.com/stripo",
+    "skipped": "vdp"
+   },
+   "lemlist": {
+    "name": "lemlist",
+    "launched": null,
+    "url": "https://hackerone.com/lemlist",
+    "skipped": "vdp"
+   },
+   "keybank": {
+    "name": "KeyBank",
+    "launched": null,
+    "url": "https://hackerone.com/keybank",
+    "skipped": "vdp"
+   },
+   "gmelius": {
+    "name": "Gmelius",
+    "launched": null,
+    "url": "https://hackerone.com/gmelius",
+    "skipped": "vdp"
+   },
+   "thomsonreuters-public": {
+    "name": "Thomson Reuters",
+    "launched": null,
+    "url": "https://hackerone.com/thomsonreuters-public",
+    "skipped": "vdp"
+   },
+   "streak_com": {
+    "name": "Streak",
+    "launched": null,
+    "url": "https://hackerone.com/streak_com",
+    "skipped": "vdp"
+   },
+   "palo_alto_software": {
+    "name": "Palo Alto Software",
+    "launched": null,
+    "url": "https://hackerone.com/palo_alto_software",
+    "skipped": "vdp"
+   },
+   "mtn_group": {
+    "name": "MTN Group",
+    "launched": null,
+    "url": "https://hackerone.com/mtn_group",
+    "skipped": "vdp"
+   },
+   "equifax": {
+    "name": "Equifax-vdp",
+    "launched": null,
+    "url": "https://hackerone.com/equifax",
+    "skipped": "vdp"
+   },
+   "top_echelon_software": {
+    "name": "Top Echelon Software",
+    "launched": null,
+    "url": "https://hackerone.com/top_echelon_software",
+    "skipped": "vdp"
+   },
+   "solidus": {
+    "name": "Solidus",
+    "launched": null,
+    "url": "https://hackerone.com/solidus",
+    "skipped": "vdp"
+   },
+   "worklytics": {
+    "name": "Worklytics",
+    "launched": null,
+    "url": "https://hackerone.com/worklytics",
+    "skipped": "vdp"
+   },
+   "defectdojo": {
+    "name": "DefectDojo",
+    "launched": null,
+    "url": "https://hackerone.com/defectdojo",
+    "skipped": "vdp"
+   },
+   "trellix": {
+    "name": "Trellix",
+    "launched": null,
+    "url": "https://hackerone.com/trellix",
+    "skipped": "vdp"
+   },
+   "curl": {
+    "name": "curl",
+    "launched": null,
+    "url": "https://hackerone.com/curl",
+    "skipped": "vdp"
+   },
+   "starling_bank": {
+    "name": "Starling Bank VDP",
+    "launched": null,
+    "url": "https://hackerone.com/starling_bank",
+    "skipped": "vdp"
+   },
+   "central-security-project": {
+    "name": "Central Security Project",
+    "launched": null,
+    "url": "https://hackerone.com/central-security-project",
+    "skipped": "vdp"
+   },
+   "capital-one": {
+    "name": "Capital One",
+    "launched": null,
+    "url": "https://hackerone.com/capital-one",
+    "skipped": "vdp"
+   },
+   "msd": {
+    "name": "Merck & Co., Inc., Rahway, NJ, USA",
+    "launched": null,
+    "url": "https://hackerone.com/msd",
+    "skipped": "vdp"
+   },
+   "phpbb": {
+    "name": "phpBB",
+    "launched": null,
+    "url": "https://hackerone.com/phpbb",
+    "skipped": "vdp"
+   },
+   "ford": {
+    "name": "Ford",
+    "launched": null,
+    "url": "https://hackerone.com/ford",
+    "skipped": "vdp"
+   },
+   "expediagroup": {
+    "name": "Expedia Group VDP",
+    "launched": null,
+    "url": "https://hackerone.com/expediagroup",
+    "skipped": "vdp"
+   },
+   "nutanix": {
+    "name": "Nutanix",
+    "launched": null,
+    "url": "https://hackerone.com/nutanix",
+    "skipped": "vdp"
+   },
+   "nisc": {
+    "name": "NISC-VDP",
+    "launched": null,
+    "url": "https://hackerone.com/nisc",
+    "skipped": "vdp"
+   },
+   "ibm": {
+    "name": "IBM",
+    "launched": null,
+    "url": "https://hackerone.com/ibm",
+    "skipped": "vdp"
+   },
+   "arkadiyt-projects": {
+    "name": "arkadiyt-projects",
+    "launched": null,
+    "url": "https://hackerone.com/arkadiyt-projects",
+    "skipped": "vdp"
+   },
+   "duckduckgo": {
+    "name": "DuckDuckGo",
+    "launched": null,
+    "url": "https://hackerone.com/duckduckgo",
+    "skipped": "vdp"
+   },
+   "toyota": {
+    "name": "Toyota",
+    "launched": null,
+    "url": "https://hackerone.com/toyota",
+    "skipped": "vdp"
+   },
+   "coalition": {
+    "name": "Coalition, Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/coalition",
+    "skipped": "vdp"
+   },
+   "sony": {
+    "name": "Sony",
+    "launched": null,
+    "url": "https://hackerone.com/sony",
+    "skipped": "vdp"
+   },
+   "autodesk": {
+    "name": "Autodesk",
+    "launched": null,
+    "url": "https://hackerone.com/autodesk",
+    "skipped": "vdp"
+   },
+   "monero": {
+    "name": "Monero",
+    "launched": null,
+    "url": "https://hackerone.com/monero",
+    "skipped": "vdp"
+   },
+   "bitwarden": {
+    "name": "Bitwarden",
+    "launched": null,
+    "url": "https://hackerone.com/bitwarden",
+    "skipped": "vdp"
+   },
+   "oportun_vdp": {
+    "name": "Oportun",
+    "launched": null,
+    "url": "https://hackerone.com/oportun_vdp",
+    "skipped": "vdp"
+   },
+   "wakatime": {
+    "name": "WakaTime",
+    "launched": null,
+    "url": "https://hackerone.com/wakatime",
+    "skipped": "vdp"
+   },
+   "stellar": {
+    "name": "Stellar.org",
+    "launched": null,
+    "url": "https://hackerone.com/stellar",
+    "skipped": "vdp"
+   },
+   "weblate": {
+    "name": "Weblate",
+    "launched": null,
+    "url": "https://hackerone.com/weblate",
+    "skipped": "vdp"
+   },
+   "disclosure-assistance": {
+    "name": "Disclosure Assistance",
+    "launched": null,
+    "url": "https://hackerone.com/disclosure-assistance",
+    "skipped": "vdp"
+   },
+   "deptofdefense": {
+    "name": "U.S. Dept Of Defense",
+    "launched": null,
+    "url": "https://hackerone.com/deptofdefense",
+    "skipped": "vdp"
+   },
+   "rubygems": {
+    "name": "RubyGems",
+    "launched": null,
+    "url": "https://hackerone.com/rubygems",
+    "skipped": "vdp"
+   },
+   "owox": {
+    "name": "OWOX, Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/owox",
+    "skipped": "vdp"
+   },
+   "publitas": {
+    "name": "Publitas",
+    "launched": null,
+    "url": "https://hackerone.com/publitas",
+    "skipped": "vdp"
+   },
+   "gm": {
+    "name": "General Motors",
+    "launched": null,
+    "url": "https://hackerone.com/gm",
+    "skipped": "vdp"
+   },
+   "versioncake": {
+    "name": "Version Cake",
+    "launched": null,
+    "url": "https://hackerone.com/versioncake",
+    "skipped": "vdp"
+   },
+   "cert": {
+    "name": "CERT/CC",
+    "launched": null,
+    "url": "https://hackerone.com/cert",
+    "skipped": "vdp"
+   },
+   "revive_adserver": {
+    "name": "Revive Adserver",
+    "launched": null,
+    "url": "https://hackerone.com/revive_adserver",
+    "skipped": "vdp"
+   },
+   "coursera": {
+    "name": "Coursera",
+    "launched": null,
+    "url": "https://hackerone.com/coursera",
+    "skipped": "vdp"
+   },
+   "ips": {
+    "name": "Invision Power Services, Inc.",
+    "launched": null,
+    "url": "https://hackerone.com/ips",
+    "skipped": "vdp"
+   },
+   "formassembly": {
+    "name": "FormAssembly",
+    "launched": null,
+    "url": "https://hackerone.com/formassembly",
+    "skipped": "vdp"
+   },
+   "informatica": {
+    "name": "Informatica",
+    "launched": null,
+    "url": "https://hackerone.com/informatica",
+    "skipped": "vdp"
+   },
+   "khanacademy": {
+    "name": "Khan Academy",
+    "launched": null,
+    "url": "https://hackerone.com/khanacademy",
+    "skipped": "vdp"
+   },
+   "concretecms": {
+    "name": "Concrete CMS",
+    "launched": null,
+    "url": "https://hackerone.com/concretecms",
+    "skipped": "vdp"
+   },
+   "rails": {
+    "name": "Ruby on Rails",
+    "launched": null,
+    "url": "https://hackerone.com/rails",
+    "skipped": "vdp"
+   },
+   "1password": {
+    "name": "1Password - Enterprise Password Manager",
+    "launched": null,
+    "url": "https://hackerone.com/1password"
+   },
+   "bcny": {
+    "name": "The Browser Company of NYC",
+    "launched": null,
+    "url": "https://hackerone.com/bcny"
+   },
+   "verily_life_sciences": {
+    "name": "Verily Life Sciences",
+    "launched": null,
+    "url": "https://hackerone.com/verily_life_sciences"
+   },
+   "bumba_bbp": {
+    "name": "Bumba",
+    "launched": null,
+    "url": "https://hackerone.com/bumba_bbp"
+   },
+   "starbucks_japan": {
+    "name": "Starbucks Japan",
+    "launched": null,
+    "url": "https://hackerone.com/starbucks_japan"
+   },
+   "starbucks_china": {
+    "name": "Starbucks China",
+    "launched": null,
+    "url": "https://hackerone.com/starbucks_china"
+   },
+   "nba-public": {
+    "name": "NBA Public Bug Bounty",
+    "launched": null,
+    "url": "https://hackerone.com/nba-public"
+   },
+   "circle-bbp": {
+    "name": "Circle",
+    "launched": null,
+    "url": "https://hackerone.com/circle-bbp"
+   },
+   "varonis": {
+    "name": "Varonis",
+    "launched": null,
+    "url": "https://hackerone.com/varonis"
+   },
+   "klarna": {
+    "name": "Klarna",
+    "launched": null,
+    "url": "https://hackerone.com/klarna"
    }
   },
   "bugcrowd": {

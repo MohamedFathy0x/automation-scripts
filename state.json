@@ -4047,6 +4047,11 @@
     "name": "codeclou GmbH",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/codeclou"
+   },
+   "/engagements/cvent-bb-og": {
+    "name": "Cvent Bug Bounty ",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/cvent-bb-og"
    }
   },
   "intigriti": {

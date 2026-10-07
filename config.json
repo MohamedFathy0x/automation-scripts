@@ -4,6 +4,7 @@
   "disable_link_preview": true,
   "only_bounties": true,
   "exclude_hardware_only": true,
+  "max_launch_age_hours": 48,
   "notify_removed": false,
   "use_fallback_dataset": true,
   "max_scope_lines": 10,

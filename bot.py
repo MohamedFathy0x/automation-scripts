@@ -591,6 +591,7 @@ def load_config():
     cfg.setdefault("disable_link_preview", True)
     cfg.setdefault("only_bounties", False)
     cfg.setdefault("exclude_hardware_only", True)
+    cfg.setdefault("max_launch_age_hours", 48)
     cfg.setdefault("notify_removed", False)
     cfg.setdefault("use_fallback_dataset", True)
     cfg.setdefault("max_scope_lines", 10)
@@ -716,12 +717,57 @@ def run_cycle(cfg, state, dry_run=False, bootstrap=False, demo=False):
                 log(f"bootstrap telegram message failed: {e}")
         return
 
+    # one-time deep bootstrap: seed the state with the FULL historical list
+    # from the fallback dataset.  The direct fetchers only see the newest
+    # window (H1: 100), and old programs re-enter that window when they are
+    # relaunched or edited — without this they announce as "new".
+    deep = state.setdefault("deep_bootstrapped", {})
+    if cfg.get("use_fallback_dataset", True):
+        for platform in enabled:
+            if platform == "standoff365" or deep.get(platform):
+                continue                        # S365 list is already complete
+            try:
+                pk = known.setdefault(platform, {})
+                added = 0
+                for p in dataset_programs(platform):
+                    if p.key not in pk:
+                        pk[p.key] = {"name": p.name, "launched": p.launched,
+                                     "url": p.url, "seeded": True}
+                        added += 1
+                deep[platform] = True
+                if added:
+                    log(f"deep bootstrap {platform}: seeded {added} historical programs")
+            except Exception as e:
+                log(f"deep bootstrap {platform} failed (will retry next cycle) - {e}")
+        save_state(state)
+
     new_programs = []
     for platform, progs in all_programs.items():
         pk = known.setdefault(platform, {})
         for p in progs:
             if p.key not in pk:
                 new_programs.append(p)
+
+    # age guard: never announce anything that did not just launch — old
+    # programs re-appearing in a platform's window are recorded silently
+    max_age = cfg.get("max_launch_age_hours", 48)
+    if max_age:
+        now_utc = datetime.now(timezone.utc)
+        fresh = []
+        for p in new_programs:
+            dt = None
+            if p.launched:
+                try:
+                    dt = datetime.fromisoformat(p.launched.replace("Z", "+00:00"))
+                except ValueError:
+                    dt = None
+            if dt and (now_utc - dt).total_seconds() > max_age * 3600:
+                known.setdefault(p.platform, {})[p.key] = {
+                    "name": p.name, "launched": p.launched, "url": p.url,
+                    "skipped": "older than window"}
+                continue
+            fresh.append(p)
+        new_programs = fresh
 
     if demo and all_programs:
         for progs in all_programs.values():

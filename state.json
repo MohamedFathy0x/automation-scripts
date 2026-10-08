@@ -4069,6 +4069,11 @@
     "name": "Almarise Marketplace Managed Bug Bounty Engagement ",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/almarise-market"
+   },
+   "/engagements/avisi": {
+    "name": "Avisi Marketplace Bug Bounty Program",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/avisi"
    }
   },
   "intigriti": {

@@ -4064,6 +4064,11 @@
     "name": "Cvent Bug Bounty ",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/cvent-bb-og"
+   },
+   "/engagements/almarise-market": {
+    "name": "Almarise Marketplace Managed Bug Bounty Engagement ",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/almarise-market"
    }
   },
   "intigriti": {

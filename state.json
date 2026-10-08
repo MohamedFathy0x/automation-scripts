@@ -4074,6 +4074,11 @@
     "name": "Avisi Marketplace Bug Bounty Program",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/avisi"
+   },
+   "/engagements/excentia": {
+    "name": "Excentia Bug Bounty",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/excentia"
    }
   },
   "intigriti": {

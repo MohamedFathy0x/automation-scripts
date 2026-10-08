@@ -2590,6 +2590,18 @@
     "launched": null,
     "url": "https://hackerone.com/security",
     "seeded": true
+   },
+   "verisk_vdp": {
+    "name": "Verisk VDP",
+    "launched": "2026-10-08T15:43:32.944Z",
+    "url": "https://hackerone.com/verisk_vdp",
+    "skipped": "vdp"
+   },
+   "aegean_airlines_vdp": {
+    "name": "Aegean Airlines Vulnerability Disclosure",
+    "launched": "2026-10-08T10:29:16.713Z",
+    "url": "https://hackerone.com/aegean_airlines_vdp",
+    "skipped": "vdp"
    }
   },
   "bugcrowd": {
@@ -5310,7 +5322,7 @@
    }
   }
  },
- "last_heartbeat": 1791405342.9753354,
+ "last_heartbeat": 1791477354.7236514,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

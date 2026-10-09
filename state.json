@@ -4079,6 +4079,11 @@
     "name": "Excentia Bug Bounty",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/excentia"
+   },
+   "/engagements/decadisag": {
+    "name": "Decadis AG",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/decadisag"
    }
   },
   "intigriti": {

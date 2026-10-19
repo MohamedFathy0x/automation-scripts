@@ -4965,6 +4965,12 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/intigriti/intigriti",
     "seeded": true
+   },
+   "intigriti/challenge1026": {
+    "name": "Challenge 1026",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/intigriti/challenge1026",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5252,6 +5258,12 @@
     "name": "OneDoc",
     "launched": "2026-10-14T13:46:38+02:00",
     "url": "https://yeswehack.com/programs/onedoc-sa-bug-bounty-program"
+   },
+   "govtech-vulnerability-disclosure-programme-policy": {
+    "name": "GovTech - Vulnerability Disclosure Programme",
+    "launched": "2026-10-19T05:20:12+02:00",
+    "url": "https://yeswehack.com/programs/govtech-vulnerability-disclosure-programme-policy",
+    "skipped": "vdp"
    }
   },
   "standoff365": {
@@ -5368,7 +5380,7 @@
    }
   }
  },
- "last_heartbeat": 1792342652.864808,
+ "last_heartbeat": 1792414662.9153001,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

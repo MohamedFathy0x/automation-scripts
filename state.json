@@ -4971,6 +4971,11 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/intigriti/challenge1026",
     "skipped": "vdp"
+   },
+   "lightspark/lightsparkpublicbugbounty": {
+    "name": "Lightspark Public Bug Bounty",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/lightspark/lightsparkpublicbugbounty"
    }
   },
   "yeswehack": {

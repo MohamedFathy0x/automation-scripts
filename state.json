@@ -5382,6 +5382,11 @@
     "launched": "2025-12-26T06:57:12.189135Z",
     "url": "https://bugbounty.standoff365.com/programs/pt_siem",
     "skipped": "older than window"
+   },
+   "rowi": {
+    "name": "ROWI",
+    "launched": "2026-10-20T09:11:21.431709Z",
+    "url": "https://bugbounty.standoff365.com/programs/rowi"
    }
   }
  },

@@ -5387,6 +5387,11 @@
     "name": "ROWI",
     "launched": "2026-10-20T09:11:21.431709Z",
     "url": "https://bugbounty.standoff365.com/programs/rowi"
+   },
+   "sber2b_edo": {
+    "name": "Сбер2B ЭДО",
+    "launched": "2026-10-22T08:45:37.911882Z",
+    "url": "https://bugbounty.standoff365.com/programs/sber2b_edo"
    }
   }
  },

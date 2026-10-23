@@ -4987,6 +4987,12 @@
     "name": "Lightspark Public Bug Bounty",
     "launched": null,
     "url": "https://app.intigriti.com/programs/lightspark/lightsparkpublicbugbounty"
+   },
+   "tccc/cokeonenorthamerica": {
+    "name": "Coke One North America",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/tccc/cokeonenorthamerica",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5406,7 +5412,7 @@
    }
   }
  },
- "last_heartbeat": 1792702952.5627716,
+ "last_heartbeat": 1792775021.2848785,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

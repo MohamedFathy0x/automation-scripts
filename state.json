@@ -2613,6 +2613,12 @@
     "name": "GoCardless Bug Bounty Program",
     "launched": null,
     "url": "https://hackerone.com/gocardless_bbp"
+   },
+   "xp_inc_vdp": {
+    "name": "XP Inc Vulnerability Disclosure",
+    "launched": "2026-10-27T16:47:52.627Z",
+    "url": "https://hackerone.com/xp_inc_vdp",
+    "skipped": "vdp"
    }
   },
   "bugcrowd": {
@@ -5412,7 +5418,7 @@
    }
   }
  },
- "last_heartbeat": 1793063438.3740203,
+ "last_heartbeat": 1793135446.9979184,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

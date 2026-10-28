@@ -5415,6 +5415,11 @@
     "name": "Сбер2B ЭДО",
     "launched": "2026-10-22T08:45:37.911882Z",
     "url": "https://bugbounty.standoff365.com/programs/sber2b_edo"
+   },
+   "red_database": {
+    "name": "СУБД Ред База Данных",
+    "launched": "2026-10-28T07:00:03.961698Z",
+    "url": "https://bugbounty.standoff365.com/programs/red_database"
    }
   }
  },

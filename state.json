@@ -4999,6 +4999,12 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/tccc/cokeonenorthamerica",
     "skipped": "vdp"
+   },
+   "intigriti/challengebrp": {
+    "name": "BRP Challenge",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/intigriti/challengebrp",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5423,7 +5429,7 @@
    }
   }
  },
- "last_heartbeat": 1793135446.9979184,
+ "last_heartbeat": 1793207541.9022257,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

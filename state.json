@@ -5011,6 +5011,11 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/intigriti/challengebrp",
     "skipped": "vdp"
+   },
+   "adac/adacbugbountyprogram": {
+    "name": "ADAC Bug Bounty Program",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/adac/adacbugbountyprogram"
    }
   },
   "yeswehack": {

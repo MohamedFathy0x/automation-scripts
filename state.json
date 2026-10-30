@@ -2619,6 +2619,12 @@
     "launched": "2026-10-27T16:47:52.627Z",
     "url": "https://hackerone.com/xp_inc_vdp",
     "skipped": "vdp"
+   },
+   "smartsheet_vdp": {
+    "name": "Smartsheet (VDP)",
+    "launched": "2026-10-29T16:17:45.038Z",
+    "url": "https://hackerone.com/smartsheet_vdp",
+    "skipped": "vdp"
    }
   },
   "bugcrowd": {
@@ -5429,7 +5435,7 @@
    }
   }
  },
- "last_heartbeat": 1793279648.5284784,
+ "last_heartbeat": 1793351682.9212775,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

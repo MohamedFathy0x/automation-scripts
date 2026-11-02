@@ -5437,6 +5437,11 @@
     "name": "СУБД Ред База Данных",
     "launched": "2026-10-28T07:00:03.961698Z",
     "url": "https://bugbounty.standoff365.com/programs/red_database"
+   },
+   "t-crypto": {
+    "name": "Т-Крипто",
+    "launched": "2026-11-02T06:15:04.684072Z",
+    "url": "https://bugbounty.standoff365.com/programs/t-crypto"
    }
   }
  },

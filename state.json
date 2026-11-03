@@ -5442,10 +5442,16 @@
     "name": "Т-Крипто",
     "launched": "2026-11-02T06:15:04.684072Z",
     "url": "https://bugbounty.standoff365.com/programs/t-crypto"
+   },
+   "primorye": {
+    "name": "Информационные ресурсы Приморского края",
+    "launched": "2026-11-03T11:02:51.204951Z",
+    "url": "https://bugbounty.standoff365.com/programs/primorye",
+    "skipped": "vdp"
    }
   }
  },
- "last_heartbeat": 1793639970.5157804,
+ "last_heartbeat": 1793712148.4801352,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

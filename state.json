@@ -4122,6 +4122,11 @@
     "name": "Lively Apps GmbH - marketplace Bug Bounty Program ",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/lively-apps"
+   },
+   "/engagements/bytera-market": {
+    "name": "Bytera Marketplace Managed Bug Bounty Engagement",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/bytera-market"
    }
   },
   "intigriti": {

@@ -5459,6 +5459,11 @@
     "launched": "2026-11-03T11:02:51.204951Z",
     "url": "https://bugbounty.standoff365.com/programs/primorye",
     "skipped": "vdp"
+   },
+   "mshp": {
+    "name": "Московская школа программистов",
+    "launched": "2026-11-06T13:33:29.148268Z",
+    "url": "https://bugbounty.standoff365.com/programs/mshp"
    }
   }
  },

@@ -5021,6 +5021,12 @@
     "name": "ADAC Bug Bounty Program",
     "launched": null,
     "url": "https://app.intigriti.com/programs/adac/adacbugbountyprogram"
+   },
+   "rivian/rivianvdp": {
+    "name": "Rivian Vulnerability Disclosure Program",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/rivian/rivianvdp",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5456,7 +5462,7 @@
    }
   }
  },
- "last_heartbeat": 1793856377.4233303,
+ "last_heartbeat": 1793928378.153738,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

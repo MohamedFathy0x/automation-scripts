@@ -2625,6 +2625,12 @@
     "launched": "2026-10-29T16:17:45.038Z",
     "url": "https://hackerone.com/smartsheet_vdp",
     "skipped": "vdp"
+   },
+   "litellm": {
+    "name": "LiteLLM (VDP)",
+    "launched": "2026-11-09T15:11:14.691Z",
+    "url": "https://hackerone.com/litellm",
+    "skipped": "vdp"
    }
   },
   "bugcrowd": {
@@ -5032,6 +5038,12 @@
     "name": "Fluvius",
     "launched": null,
     "url": "https://app.intigriti.com/programs/fluvius/fluvius"
+   },
+   "borgwarner/borgwarnervdp": {
+    "name": "BorgWarner Vulnerability Disclosure Program",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/borgwarner/borgwarnervdp",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5472,7 +5484,7 @@
    }
   }
  },
- "last_heartbeat": 1794216689.0039842,
+ "last_heartbeat": 1794288736.18525,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

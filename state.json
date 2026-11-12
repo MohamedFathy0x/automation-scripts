@@ -2631,6 +2631,21 @@
     "launched": "2026-11-09T15:11:14.691Z",
     "url": "https://hackerone.com/litellm",
     "skipped": "vdp"
+   },
+   "freshworks": {
+    "name": "Freshworks ",
+    "launched": null,
+    "url": "https://hackerone.com/freshworks"
+   },
+   "oasisprotocol": {
+    "name": "Oasis Protocol Foundation",
+    "launched": null,
+    "url": "https://hackerone.com/oasisprotocol"
+   },
+   "bitmex": {
+    "name": "BitMEX",
+    "launched": null,
+    "url": "https://hackerone.com/bitmex"
    }
   },
   "bugcrowd": {

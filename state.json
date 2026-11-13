@@ -5059,6 +5059,11 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/borgwarner/borgwarnervdp",
     "skipped": "vdp"
+   },
+   "dropbox/dropbox-prompt2pwn": {
+    "name": "Dropbox - Prompt2PWN",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/dropbox/dropbox-prompt2pwn"
    }
   },
   "yeswehack": {

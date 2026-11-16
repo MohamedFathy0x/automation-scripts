@@ -5064,6 +5064,12 @@
     "name": "Dropbox - Prompt2PWN",
     "launched": null,
     "url": "https://app.intigriti.com/programs/dropbox/dropbox-prompt2pwn"
+   },
+   "intigriti/challenge1126": {
+    "name": "Challenge 1126",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/intigriti/challenge1126",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5509,7 +5515,7 @@
    }
   }
  },
- "last_heartbeat": 1794793584.2638257,
+ "last_heartbeat": 1794865728.154169,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

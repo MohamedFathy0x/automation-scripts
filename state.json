@@ -5357,6 +5357,11 @@
     "launched": "2026-10-19T05:20:12+02:00",
     "url": "https://yeswehack.com/programs/govtech-vulnerability-disclosure-programme-policy",
     "skipped": "vdp"
+   },
+   "boursobank-bug-bounty-program": {
+    "name": "BoursoBank Bug Bounty Program",
+    "launched": "2026-11-16T10:01:40+01:00",
+    "url": "https://yeswehack.com/programs/boursobank-bug-bounty-program"
    }
   },
   "standoff365": {

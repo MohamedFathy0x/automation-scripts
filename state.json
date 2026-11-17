@@ -5070,6 +5070,11 @@
     "launched": null,
     "url": "https://app.intigriti.com/programs/intigriti/challenge1126",
     "skipped": "vdp"
+   },
+   "onepassword/1passwordbugbountyprogram": {
+    "name": "1Password Bug Bounty Program",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/onepassword/1passwordbugbountyprogram"
    }
   },
   "yeswehack": {

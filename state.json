@@ -4153,6 +4153,11 @@
     "name": "Bytera Marketplace Managed Bug Bounty Engagement",
     "launched": null,
     "url": "https://bugcrowd.com/engagements/bytera-market"
+   },
+   "/engagements/nord-security-mbb": {
+    "name": "Nord Security Managed Bug Bounty Engagement",
+    "launched": null,
+    "url": "https://bugcrowd.com/engagements/nord-security-mbb"
    }
   },
   "intigriti": {

@@ -2646,6 +2646,11 @@
     "name": "BitMEX",
     "launched": null,
     "url": "https://hackerone.com/bitmex"
+   },
+   "coupang": {
+    "name": "Coupang",
+    "launched": "2026-11-18T01:02:44.617Z",
+    "url": "https://hackerone.com/coupang"
    }
   },
   "bugcrowd": {

@@ -5533,10 +5533,16 @@
     "name": "Московская школа программистов",
     "launched": "2026-11-06T13:33:29.148268Z",
     "url": "https://bugbounty.standoff365.com/programs/mshp"
+   },
+   "metascan": {
+    "name": "METASCAN",
+    "launched": "2026-11-24T07:58:01.558109Z",
+    "url": "https://bugbounty.standoff365.com/programs/metascan",
+    "skipped": "vdp"
    }
   }
  },
- "last_heartbeat": 1795442630.9936283,
+ "last_heartbeat": 1795514803.6750875,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

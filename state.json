@@ -5091,6 +5091,12 @@
     "name": "1Password Bug Bounty Program",
     "launched": null,
     "url": "https://app.intigriti.com/programs/onepassword/1passwordbugbountyprogram"
+   },
+   "aspira/aspiravdp": {
+    "name": "Aspira VDP",
+    "launched": null,
+    "url": "https://app.intigriti.com/programs/aspira/aspiravdp",
+    "skipped": "vdp"
    }
   },
   "yeswehack": {
@@ -5542,7 +5548,7 @@
    }
   }
  },
- "last_heartbeat": 1795514803.6750875,
+ "last_heartbeat": 1795586909.5683496,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,

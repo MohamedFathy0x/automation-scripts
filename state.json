@@ -2657,6 +2657,12 @@
     "launched": "2026-11-23T00:26:30.212Z",
     "url": "https://hackerone.com/gcash_vdp",
     "skipped": "vdp"
+   },
+   "northerntechhq": {
+    "name": "Northern.tech",
+    "launched": "2025-11-17T13:14:26.949Z",
+    "url": "https://hackerone.com/northerntechhq",
+    "skipped": "older than window"
    }
   },
   "bugcrowd": {
@@ -5548,7 +5554,7 @@
    }
   }
  },
- "last_heartbeat": 1795586909.5683496,
+ "last_heartbeat": 1795659060.5731678,
  "deep_bootstrapped": {
   "hackerone": true,
   "bugcrowd": true,
